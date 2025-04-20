@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     box-shadow: none;
+    list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,16 +13,71 @@ body {
 }
 
 #busca-criar {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
+}
+
+#busca-criar h1 {
+    background-color: #1dc76a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
     align-items: center;
+}
+
+#busca-criar div {
+    display: flex;
+    max-width: 30%;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+input,
+textarea {
+    border-radius: 5%;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input,
+textarea:focus {
+    border: 2px solid #1dc76a;
 }
 
 button {
     background-color: #1dc76a;
-    border-radius: 5%;
-    padding: 4px;
+    border-radius: 4px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #1e9152;
+    transition: 0.5s;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+ul li {
+    background-color: #ffffff;
+    width: 25%;
+    border-radius: 15px;
+    padding: 14px;
+}
+
+ul li div {
+    display: flex;
+    justify-content: flex-end;
 }
 
 #overlay {
@@ -48,7 +104,8 @@ button {
     z-index: 2;
 }
 
-#modal.active, #overlay.active {
+#modal.active,
+#overlay.active {
     visibility: visible;
     opacity: 1;
 }
