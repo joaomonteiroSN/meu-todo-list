@@ -18,17 +18,19 @@
             <h2>Lista de tarefas</h2>
             <div>
                 <input type="text" placeholder="Buscar tarefa existente">
-                <button>Nova tarefa</button>
+                <button onclick="criarTarefa()">Nova tarefa</button>
             </div>
         </section>
         <section id="lista"></section>
-        <div id="overlay"></div>
+        <div id="overlay" onclick="fecharModal()"></div>
         <section id="modal">
             <form>
-                <label for="titulo">Titulo da tarefa</label>
+                <div>
+                    <label for="titulo">Titulo da tarefa</label><box-icon onclick="fecharModal()" name='window-close'></box-icon>
+                </div>
                 <input type="text">
                 <label for="descricao">Descrição da tarefa</label>
-                <textarea cols="30" rows="10"></textarea>
+                <textarea></textarea>
                 <button type="submit">Criar</button>
             </form>
         </section>

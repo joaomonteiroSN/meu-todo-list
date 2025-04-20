@@ -32,20 +32,39 @@ button {
     top: 0;
     left: 0;
     z-index: 1;
+    visibility: hidden;
+    opacity: 0;
 }
 
 #modal {
-    display: flex;
-    justify-content: center;
+    position: fixed;
+    width: 400px;
+    padding: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+}
+
+#modal.active, #overlay.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 #modal form {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    max-width: 40%;
+    width: 100%;
     margin: 16px;
+    gap: 5px;
     background-color: #ffffff;
     padding: 15px;
     border-radius: 5%;
+}
+
+#modal form div {
+    display: flex;
+    justify-content: space-between;
 }
