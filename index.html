@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <header>
+        Todo list - Mini projeto geração tech
+    </header>
+    <main>
+        <section id="busca-criar">
+            <h2>Lista de tarefas</h2>
+            <div>
+                <input type="text" placeholder="Buscar tarefa existente">
+                <button>Nova tarefa</button>
+            </div>
+        </section>
+        <section id="lista"></section>
+        <div id="overlay"></div>
+        <section id="modal">
+            <form>
+                <label for="titulo">Titulo da tarefa</label>
+                <input type="text">
+                <label for="descricao">Descrição da tarefa</label>
+                <textarea cols="30" rows="10"></textarea>
+                <button type="submit">Criar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./app.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
