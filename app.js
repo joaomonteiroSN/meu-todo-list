@@ -1,4 +1,4 @@
-function criarTarefa() {
+function abrirModal() {
     overlay.classList.add("active")
     modal.classList.add("active")
 }
@@ -9,10 +9,10 @@ function fecharModal() {
 }
 
 // Para fazer:
-// criar tarefas
-// deletar tarefa
 // listar tarefas - ok
-// buscar tarefas
+// criar tarefas - ok
+// deletar tarefa - pendente
+// buscar tarefas - pendente
 
 function listarTarefas() {
     fetch("http://localhost:3000/tarefas")
@@ -34,3 +34,23 @@ function listarTarefas() {
     })
 }
 listarTarefas();
+
+function criarTarefa() {
+    event.preventDefault()
+    fetch("http://localhost:3000/tarefas" , {
+        method:"POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            titulo: titulo.value,
+            descricao: descricao.value
+        })
+    })
+    .then(res => json)
+    .then(res => {
+        console.log(res)
+        fecharModal()
+        listarTarefas()
+    })
+}

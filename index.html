@@ -18,7 +18,7 @@
             <h1>Lista de tarefas</h1>
             <div>
                 <input type="text" id="buscar" placeholder="Buscar tarefa existente">
-                <box-icon onclick="criarTarefa()" size="lg" color="#1dc76a" animation="tada-hover"  type='solid' name='plus-circle'></box-icon>
+                <box-icon onclick="abrirModal()" size="lg" color="#1dc76a" animation="tada-hover"  type='solid' name='plus-circle'></box-icon>
             </div>
         </section>
         <section id="lista">
@@ -27,13 +27,13 @@
         </section>
         <div id="overlay" onclick="fecharModal()"></div>
         <section id="modal">
-            <form>
+            <form onsubmit="criarTarefa()">
                 <div>
                     <label for="titulo">Titulo da tarefa</label><box-icon onclick="fecharModal()" name='window-close'></box-icon>
                 </div>
-                <input type="text">
+                <input id="titulo" type="text">
                 <label for="descricao">Descrição da tarefa</label>
-                <textarea></textarea>
+                <textarea id="descricao"></textarea>
                 <button type="submit">Criar</button>
             </form>
         </section>
