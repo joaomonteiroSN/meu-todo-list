@@ -11,7 +11,7 @@ function fecharModal() {
 // Para fazer:
 // listar tarefas - ok
 // criar tarefas - ok
-// deletar tarefa - pendente
+// deletar tarefa - ok
 // buscar tarefas - pendente
 
 function listarTarefas() {
@@ -25,7 +25,7 @@ function listarTarefas() {
                     <h3>${tarefa.titulo}</h3>
                     <p>${tarefa.descricao}</p>
                     <div>
-                        <box-icon type='solid' name='trash-alt' animation='flashing-hover'></box-icon>
+                        <box-icon type='solid' name='trash-alt' animation='flashing-hover' onclick="deletarTarefa(${tarefa.id})"></box-icon>
                     </div>
                 </li>
         `
@@ -52,5 +52,15 @@ function criarTarefa() {
         console.log(res)
         fecharModal()
         listarTarefas()
+    })
+}
+
+function deletarTarefa(id) {
+    fetch(`http://localhost:3000/tarefas/${id}`, {
+        method: "DELETE"
+    })
+    .then(res => json())
+    .then(res => {
+        listarTarefas();
     })
 }
