@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Todo List</title>
 </head>
 
@@ -15,9 +16,10 @@
     </header>
     <main>
         <section id="busca-criar">
-            <h1>Lista de tarefas</h1>
+            <h1>Lista de Tarefas</h1>
             <div>
                 <input type="text" id="buscar" placeholder="Buscar tarefa existente">
+                <i onclick="abrirModal()" class='bx bxs-plus-circle bx-burst-hover bx-md' style="color:#1dc76a"></i>
                 <box-icon onclick="abrirModal()" size="lg" color="#1dc76a" animation="tada-hover"  type='solid' name='plus-circle'></box-icon>
             </div>
         </section>
@@ -29,7 +31,7 @@
         <section id="modal">
             <form onsubmit="criarTarefa()">
                 <div>
-                    <label for="titulo">Titulo da tarefa</label><box-icon onclick="fecharModal()" name='window-close'></box-icon>
+                    <label for="titulo">Titulo da tarefa</label><i onclick="fecharModal()" class='bx bxs-x-circle bx-burst-hover bx-md' style="color:#ff0000" ></i>
                 </div>
                 <input id="titulo" type="text">
                 <label for="descricao">Descrição da tarefa</label>
@@ -39,10 +41,9 @@
         </section>
     </main>
     <footer>
-
+        <span>Feito com 💚 por - João Monteiro</span><a href="https://github.com/joaomonteiroSN"><i class='bx bxl-github bx-sm' style="color:#000000"></i></a>
     </footer>
     <script src="./app.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
 </html>

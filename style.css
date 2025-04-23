@@ -12,6 +12,12 @@ body {
     background-color: #e5e5e5;
 }
 
+header {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
 #busca-criar {
     width: 100%;
 }
@@ -27,6 +33,7 @@ body {
 #busca-criar div {
     display: flex;
     max-width: 30%;
+    align-items: center;
     gap: 10px;
     margin: 20px auto;
 }
@@ -123,5 +130,20 @@ ul li div {
 
 #modal form div {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+footer {
+    background-color: #1e9152;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
